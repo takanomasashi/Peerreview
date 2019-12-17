@@ -1,0 +1,20 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  textarea {
+    width: 100%;
+    border-radius: 5px;
+    border-color: #cccccc;
+    background: #eeeeee;
+  }
+  
+  button {
+    display: block;
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 0 auto;
+    background: #c0c0c0;
+    margin-top: 20px;
+  }

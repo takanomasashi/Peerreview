@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/projectsstyle.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <ul>
+      <%-content %>
+    </ul>
+    <button onclick="location.href='http://localhost:3000/projects/new'">
+      プロジェクト作成
+    </button>
+  </body>
+</html>

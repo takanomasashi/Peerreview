@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/loginstyle.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form method="post" action="/projects">
+      <input type="text" placeholder="ユーザーID" name="username" /><br />
+      <input type="text" placeholder="パスワード" name="password" /><br />
+      <input type="submit" value="ログイン" />
+    </form>
+  </body>
+</html>
