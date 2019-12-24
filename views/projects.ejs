@@ -6,11 +6,16 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <ul>
-      <%-content %>
-    </ul>
-    <button onclick="location.href='http://localhost:3000/projects/new'">
-      プロジェクト作成
-    </button>
+    <form method="post" action="/projects">
+      <input
+        type="text"
+        placeholder="redlion"
+        name="projectname"
+      /> <input type="submit" value="プロジェクト追加" /><br />
+
+    <% for(var i=0; i < content.length; i++) { %>
+      <li><a href=/projects/id>
+        <%= content[i].name %></a></li>
+    <% } %>
   </body>
 </html>
