@@ -13,9 +13,8 @@
         name="projectname"
       /> <input type="submit" value="プロジェクト追加" /><br />
 
-    <% for(var i=0; i < content.length; i++) { %>
-      <li><a href=/projects/id>
-        <%= content[i].name %></a></li>
-    <% } %>
+      <ul>
+        <%-projects %>
+      </ul>
   </body>
 </html>

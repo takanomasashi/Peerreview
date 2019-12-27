@@ -17,9 +17,20 @@ router.get("/", function(req, res) {
     }
   }
 
+  var projects_data = "";
+  for (var j = 0; j < projects.length; j++) {
+    projects_data =
+      projects_data +
+      "<li><a href='/projects_details?id=" +
+      projects[j].id +
+      "'>" +
+      projects[j].name +
+      "</a></li>";
+  }
+
   res.render("projects", {
     title: "プロジェクト一覧",
-    content: projects
+    projects: projects_data
   });
 });
 
@@ -53,18 +64,7 @@ router.post("/", function(req, res) {
       throw err;
     }
   });
-  res.redirect("/");
-});
-
-// /projects?id=(i+1)にgetでアクセスしてきたときの処理
-router.get("/id", function(req, res) {
-  var usersText = fs.readFileSync("./views/users.json");
-  var users = JSON.parse(usersText);
-
-  res.render("projects_details", {
-    title: "Redlion",
-    content: "users"
-  });
+  res.redirect("/projects");
 });
 
 module.exports = router;

@@ -10,7 +10,7 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var loginRouter = require("./routes/login");
 var projectsRouter = require("./routes/projects");
-var projectsdetailsRouter = require("./routes/projects/id");
+var projectsdetailsRouter = require("./routes/projects_details");
 var bodyParser = require("body-parser");
 
 var sessionCheck = function(req, res, next) {
@@ -49,7 +49,7 @@ app.use("/login", loginRouter);
 app.use("/", sessionCheck, indexRouter);
 app.use("/users", usersRouter);
 app.use("/projects", projectsRouter);
-app.use("/projects/id", projectsdetailsRouter);
+app.use("/projects_details", projectsdetailsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

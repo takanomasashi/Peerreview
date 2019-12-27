@@ -34,7 +34,10 @@
           "try": "まあよかったよ"
         }
       },
-      { "id": 3, "name": "yellowbird", "description": "", "feedbacks": "" }
+      { "id": 3, "name": "yellowbird", "description": "", "feedbacks": "" },
+      { "id": 4, "name": "orangehorse", "description": "", "feedbacks": "" },
+      { "id": 5, "name": "bug", "description": "", "feedbacks": "" },
+      { "id": 6, "name": "takano", "description": "", "feedbacks": "" }
     ]
   },
   { "id": 2, "username": "classi", "password": "classi" },
