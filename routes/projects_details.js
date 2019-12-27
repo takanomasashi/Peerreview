@@ -9,10 +9,28 @@ router.get("/", function(req, res) {
   var n = query.id;
 
   var text = fs.readFileSync("./views/users.json");
-  var memos = JSON.parse(text);
+  var users = JSON.parse(text);
+
+  var projects = [];
+  for (var i = 0; i < users.length; i++) {
+    var user = users[i];
+    if (
+      req.session.passport.user === user.username &&
+      Array.isArray(user.projects)
+    ) {
+      projects = user.projects;
+    }
+  }
+
+  var projects_name = "";
+  for (var j = 0; j < projects.length; j++) {
+    if (n == projects[j].id) {
+      projects_name = projects[j].name;
+    }
+  }
 
   res.render("projects_details.ejs", {
-    title: "プロジェクト詳細",
+    title: projects_name,
     url: "onclick=location.href='/projects?id=" + n + "'>",
     id: n
   });
